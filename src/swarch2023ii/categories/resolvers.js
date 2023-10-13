@@ -30,8 +30,8 @@ const resolvers = {
 		getRoute: (_, { id }) =>
 			generalRequest(`${URL3}/${id}`, 'GET'),
 		///////////////
-		FlightByOrigDest: (_, origin,destination ) =>
-			generalRequest(`${URL4}/flight`, 'GET',{origin,destination}),
+		FlightByOrigDest: (_, parameters ) =>
+			generalRequest(`${URL4}/flight`, 'GET',parameters),
 	},
 	Mutation: {
 		createUsuario: (_, { usuario }) =>

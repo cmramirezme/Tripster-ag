@@ -94,8 +94,8 @@ export const flightTypeDef = `
   }
 
   type Flight_Airport{
-    airport_name:String!
-    airport_address:String!
+    _id:ID
+    airport_origin_name:String!
   }
 
   type Flight {
@@ -126,5 +126,5 @@ export const flightTypeDef = `
       FlightByOrigDest(origin:String!,destination:String!): [Flight]
   `;
   export const countryMutations = `
-    createCountry(country_name: FlightSetCountry!): CountryCreatedResponse!
+  createCountry(country_name: FlightSetCountry!): CountryCreatedResponse!
 `;
